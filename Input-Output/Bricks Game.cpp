@@ -2,6 +2,7 @@
  using namespace std;
   int main()
   {
+    /*
     int n;
     cin>>n;
     int b=n;
@@ -28,6 +29,30 @@
         }
 
         
+    }
+    */
+    
+    int round=0;
+    int flag=1;
+    int n;
+    cin>>n;
+    while(n>0)
+    {
+        round++;
+        n=n-round*1;
+        if((n-round*2<=0)&&(n>0))
+        {
+            flag=flag*(-1);
+        }
+        n=n-round*2;
+    }
+    if(flag>0)
+    {
+        cout<<"Patlu"<<endl;
+    }
+    else
+    {
+        cout<<"Motu"<<endl;
     }
         
 
